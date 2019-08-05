@@ -17,7 +17,7 @@ public class HomeController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("/home begin");
         PrintWriter pw = resp.getWriter();
-        pw.println("hw");
+        pw.println("hwa");
         System.out.println("/home end");
     }
 }

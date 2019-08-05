@@ -1,0 +1,9 @@
+{
+  "realm": "Test",
+  "auth-server-url": "http://192.168.56.253:9080/auth",
+  "ssl-required": "none",
+  "resource": "demo_web_kc_02",
+  "credentials": {
+    "secret": "8a46ef83-6812-4664-8985-4991773b8241"
+  }
+}

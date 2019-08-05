@@ -37,6 +37,11 @@
             <version>2.3.1</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-servlet-filter-adapter</artifactId>
+            <version>4.8.0.Final</version>
+        </dependency>
     </dependencies>
 
     <build>
