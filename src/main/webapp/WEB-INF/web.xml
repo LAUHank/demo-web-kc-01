@@ -5,7 +5,14 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1"
          metadata-complete="false">
-
+    <filter>
+        <filter-name>kcFilter</filter-name>
+        <filter-class>org.keycloak.adapters.servlet.KeycloakOIDCFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>kcFilter</filter-name>
+        <url-pattern>/keycloak/login</url-pattern>
+    </filter-mapping>
     <filter>
         <filter-name>myFilter</filter-name>
         <filter-class>cn.lhl.web.dwk01.filter.MyFilter</filter-class>

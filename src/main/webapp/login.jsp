@@ -11,7 +11,7 @@
     <title>login</title>
 </head>
 <body>
-<form action="/login" method="post">
+<form action="<%=request.getContextPath()%>/login" method="post">
     username: <input type="text" name="username"><br/>
     <input type="submit" value="login">
 </form>

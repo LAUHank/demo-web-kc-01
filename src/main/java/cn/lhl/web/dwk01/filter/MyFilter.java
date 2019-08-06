@@ -23,8 +23,9 @@ public class MyFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
 
+        String ctx = request.getContextPath(); // /ctx
         String uri = request.getRequestURI();
-        List<String> whiteList = Arrays.asList(new String[] {"/login.jsp", "/login"});
+        List<String> whiteList = Arrays.asList(new String[] {ctx + "/login.jsp", ctx + "/login", ctx + "/keycloak/login"});
         if (whiteList.contains(uri)) {
             // 白名单直接放行
             filterChain.doFilter(req, resp);
@@ -38,7 +39,7 @@ public class MyFilter implements Filter {
             filterChain.doFilter(req, resp);
         } else {
             // 未登录 重定向到登录页
-            response.sendRedirect(request.getContextPath() + "/login.jsp");
+            response.sendRedirect(ctx + "/login.jsp");
         }
     }
 
