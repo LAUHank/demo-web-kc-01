@@ -1,9 +1,9 @@
 {
   "realm": "Test",
-  "auth-server-url": "http://192.168.56.253:9080/auth",
+  "auth-server-url": "http://172.17.0.91:8080/auth",
   "ssl-required": "none",
-  "resource": "demo_web_kc_02",
+  "resource": "ems-tomcat",
   "credentials": {
-    "secret": "8a46ef83-6812-4664-8985-4991773b8241"
+    "secret": "63e7c79a-9440-42d3-a14d-3b5bd5b272ce"
   }
 }

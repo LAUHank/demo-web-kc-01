@@ -1,16 +1,19 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2019/8/5
-  Time: 16:08
+  Date: 2019/8/6
+  Time: 8:41
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>login</title>
 </head>
 <body>
-hello 我的 01 ${username}
+<form action="/login" method="post">
+    username: <input type="text" name="username"><br/>
+    <input type="submit" value="login">
+</form>
 </body>
 </html>

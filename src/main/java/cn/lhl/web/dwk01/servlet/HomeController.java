@@ -1,5 +1,8 @@
 package cn.lhl.web.dwk01.servlet;
 
+import cn.lhl.web.dwk01.model.MyKeycloakToken;
+import cn.lhl.web.dwk01.utils.KeycloakUtil;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,9 +18,17 @@ import java.io.PrintWriter;
 public class HomeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("/home begin");
+        String prefix = "/home";
+        System.out.println(prefix + " begin");
+        MyKeycloakToken token = KeycloakUtil.getToken(req);
+        if (token != null) {
+            String username = token.getPreferredUsername();
+            System.out.println(prefix + " " + username);
+        } else {
+            System.out.println(prefix + " keycloak unlogined");
+        }
         PrintWriter pw = resp.getWriter();
         pw.println("hwa");
-        System.out.println("/home end");
+        System.out.println(prefix + " end");
     }
 }
